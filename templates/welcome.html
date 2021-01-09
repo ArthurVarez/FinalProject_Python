@@ -1,0 +1,26 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block title %}
+    API Varez Arthur
+{% endblock %}
+
+
+
+{% block content  %}
+    <h1>Welcome on my drug prediction API</h1>
+
+    <p>In this website you will be able to predict your Cannabis consumption base on your infos 
+        and your presonnality scores !
+    </p>
+
+    {% block page_content %}
+        <p> Click here to predict your drug consumption</p>
+
+        <button class="btn btn-outline-secondary" type="button" id="button-addon1">
+            <a href="/predict">Predict</a>
+        </button>
+    
+    {% endblock %}
+
+{% endblock %}

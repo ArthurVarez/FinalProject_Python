@@ -1,0 +1,10 @@
+{% extends 'welcome.html' %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+    <p>Please fill the following form</p>
+    {{ wtf.quick_form(form) }}
+  
+
+{% endblock %}
