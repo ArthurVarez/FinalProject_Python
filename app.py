@@ -72,15 +72,16 @@ def Informations_Form():
     myform = MyForm()
     if request.method=="POST" and myform.validate_on_submit:
         model = joblib.load('best_model.joblib')
-        result = model.predict(pd.DataFrame([[myform.age,myform.gender,myform.education,myform.country
-        ,myform.ethnicity,myform.Nscore,myform.Escore,myform.Oscore,myform.Ascore,myform.Cscore
-        ,myform.Impulsive,myform.SS]],columns=  ['Age', 'Gender', 'Education', 'Country', 'Ethnicity', 'Nscore',
+        result = model.predict(pd.DataFrame([[myform.age.data,myform.gender.data,myform.education.data,myform.country.data
+        ,myform.ethnicity.data,myform.Nscore.data,myform.Escore.data,myform.Oscore.data,myform.Ascore.data,myform.Cscore.data
+        ,myform.Impulsive.data,myform.SS.data]],columns=  ['Age', 'Gender', 'Education', 'Country', 'Ethnicity', 'Nscore',
        'Escore', 'Oscore', 'Ascore', 'Cscore', 'Impulsive', 'SS']))
-        render_template('results.html',result = result,name=myform.name)
+        return render_template('results.html',result = result,name=myform.name.data)
     return render_template('prediction.html',form=myform)
     
     
 
 
 if __name__== "__main__":
-    app.run(port=5050)
+    app.run(port=5050,debug=True)
+    
