@@ -84,7 +84,7 @@ Database contains 18 classification problems. Each of independent label variable
  Here are the ML models used in this project : KNN, RandomForest, Gradient Boostig and Logistic Regression. Most of the time, without tuning my models, RandomFrest seems to be the most efficient to deal with precision and accuracy. So I decided to tune the hyperparameters to have better predictions. 
  
  
- Last setp was to deploy a simple Flask API to test my ML model. 
+ The last step was to deploy a simple Flask API to test my ML model. 
  
   
   
